@@ -49,10 +49,9 @@ export default function Board() {
 
     <DndContext onDragEnd={handleDragEnd}>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {statuses.map((status) => (
-  <Lane key={status} status={status} todos={todos} setTodos={setTodos} />
-))}
-
+        {statuses.map((status) => (
+          <Lane key={status} status={status} todos={todos} />
+        ))}
       </div>
     </DndContext>
   </div>
